@@ -4,6 +4,7 @@
 #include "item.h"
 #include "food.h"
 #include "shield.h"
+#include "weapon.h"
 
 ShopWindow::ShopWindow(Hero *_hero, QWidget *parent) :
     QDialog(parent),
@@ -14,7 +15,10 @@ ShopWindow::ShopWindow(Hero *_hero, QWidget *parent) :
     ui->money->setValue(_hero->getMoney());
     _inventory << std::make_shared<Food>("Бутерброд", "Увеличивает жизнь на 5", 5, 5)
                << std::make_shared<Food>("Толма", "Увеличивает жизнь на 100", 20, 30)
-               << std::make_shared<Shield>("Щит", "Защита 1ур.", 15, 30);
+               << std::make_shared<Shield>("Щит(2)", "Защита 1ур.", 48, 26)
+               << std::make_shared<Weapon>("Самурайский меч", "Атак 4ур.", 56, 40)
+               << std::make_shared<Weapon>("AR-15", "Атак 6ур.", 90, 80)
+               << std::make_shared<Food>("Круассан", "Увеличивает жизнь на 23", 15, 23);
 
     ui->subjectsTable->setModel(new ShopModel(&_inventory, ui->subjectsTable));
 

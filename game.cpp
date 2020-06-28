@@ -8,9 +8,8 @@
 Game::Game(QString heroName, Maze *maze)
     :_hero(maze, heroName), _maze(maze)
 {
-    _hero.addItem(std::make_shared<Food>("Бутерброд", "Увеличивает жизнь на 5", 15, 5));
-    _hero.addItem(std::make_shared<Food>("Толма", "Увеличивает жизнь на 6", 20, 6));
-    _hero.addItem(std::make_shared<Weapon>("Меч", "Атак 1ур.", 0, 15));
+    _hero.addItem(std::make_shared<Food>("Рис", "Увеличивает жизнь на 10", 10, 10));
+    _hero.addItem(std::make_shared<Weapon>("Меч дракона(1)", "Атак 1ур.", 0, 10));
 
     _maze->init(this);
 

@@ -238,7 +238,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="title">
-     <string>Прдметы комнаты</string>
+     <string>Предметы комнаты</string>
     </property>
     <widget class="QListWidget" name="roomItems">
      <property name="geometry">
